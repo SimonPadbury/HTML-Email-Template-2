@@ -1,0 +1,295 @@
+/*
+HOW TO USE THIS STYLESHEET
+==========================
+(1.) Design and build your email first. Copy and rearrange the table-based framework components in `index.html`, and add your own email content (text and images).
+(2.) Add your corporate branding styles AFTER all these styles below.
+(3.) Copy-paste this stylesheet into the HTML HEAD.
+(4.) Pass your entire HTML email through a `CSS inliner` such as `https://putsmail.com/inliner`.
+(5.) Delete everything you don't need (e.g. the now superfluous CSS in the HEAD, and HTML comments), especially if you have a small size limit in the email system that you are using.
+(6.) Testdrive and deploy.
+*/
+
+/* Email client-specific styles */
+
+body {
+  text-size-adjust: none !important;
+  -ms-text-size-adjust: none !important;
+  -webkit-text-size-adjust: none !important;
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+#outlook a {
+  padding: 0;
+}
+
+.ExternalClass {
+  width: 100%;
+}
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
+
+.ReadMsgBody {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li,
+td,
+blockquote {
+  mso-line-height-rule: exactly;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+a[href^=tel],
+a[href^=sms] {
+  color: inherit;
+  cursor: default;
+  text-decoration: none;
+}
+
+span.yshortcuts,
+a span.yshortcuts {
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
+
+span.yshortcuts:hover,
+span.yshortcuts:active,
+span.yshortcuts:focus {
+  color: #000000;
+  background-color: transparent;
+  border: none;
+}
+
+.appleLinksWhite a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.appleLinksBlack a {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+img,
+a img {
+  outline: none;
+  text-decoration: none;
+  margin: 0 !important;
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  width: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+  display: block !important;
+}
+
+/* Framework -- base styles */
+
+table[class=wrap-all] {
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  line-height: 100% !important;
+}
+
+table {
+  table-layout: fixed;
+  margin: 0 auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+table table table {
+  table-layout: auto;
+}
+
+td {
+  border-collapse: collapse;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-word;
+}
+
+table[class=container] {
+  width: 620px;
+}
+
+/* Framework -- media query for small screens (phones) */
+
+@media only screen and (max-width: 640px) {
+  table[class=container] {
+    display: block !important;
+    width: 320px !important;
+    margin: auto !important;
+  }
+  table[class=row],
+  table[class=row] > tbody > tr > td,
+  table[class=column],
+  table[class=column] > tbody > tr > td {
+    display: block !important;
+    width: 300px !important;
+    margin: auto !important;
+  }
+  img {
+    display: block !important;
+    max-width: 320px !important;
+    height: auto !important;
+    margin: auto !important;
+  }
+  table[class=row] img {
+    max-width: 300px !important;
+  }
+}
+
+/* Framework -- helpers */
+
+/* 
+Note: If your email system has a low size limit, maybe use line breaks `&nbsp;<br/>`
+and/or empty paragraphs `<p>&nbsp;</p>` instead of these vertical spacers.
+*/
+
+td[class=vertical-spacer-10] {
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+td[class=vertical-spacer-20] {
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+td[class=vertical-spacer-30] {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+td[class=vertical-spacer-40] {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+td[class=horizontal-rule] {
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  line-height: 1px;
+  border-style: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #cccccc;
+}
+
+body,
+table[class=wrap-all] {
+  background-color: #eeeeee;
+}
+
+table[class=container] {
+  background: #ffffff;
+}
+
+/*
+Example Typography
+*/
+
+table {
+  font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+  font-size: 15px;
+  mso-line-height-rule: exactly;
+  line-height: 100%;
+  color: #444444;
+}
+
+p {
+  margin: 10px 0 10px 0;
+  font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: normal;
+  text-align: left;
+  color: #444444;
+}
+
+li {
+  font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+  font-size: 15px;
+  mso-line-height-rule: exactly;
+  line-height: 150%;
+  letter-spacing: normal;
+  color: #444444;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 10px 0 10px 0;
+  font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+  font-style: normal;
+  line-height: 125%;
+  letter-spacing: normal;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 19px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+/*
+DO NOT use h5 and h6 (and you probably don't need to use h4 either).
+*/
+
+a {
+  color: #0088cc;
+}
